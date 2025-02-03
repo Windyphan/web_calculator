@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Calculator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="calculator">
+  <div class="display-area">
+    <div id="history"></div>
+    <input type="text" id="display" disabled>
+  </div>
+  <div class="buttons-grid">
+    <div class="row">
+      <button onclick="clearDisplay()" class="clear">C</button>
+      <button onclick="toggleSign()" class="sign">+/-</button>
+      <button onclick="appendPercentage()" class="operator">%</button>
+      <button onclick="appendOperator('/')" class="operator">/</button>
+    </div>
+    <div class="row">
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button onclick="appendOperator('*')" class="operator">*</button>
+    </div>
+    <div class="row">
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button onclick="appendOperator('-')" class="operator">-</button>
+    </div>
+    <div class="row">
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button onclick="appendOperator('+')" class="operator">+</button>
+    </div>
+    <div class="row">
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="appendNumber('.')" class="decimal">.</button>
+      <button onclick="calculate()" class="equal">=</button>
+    </div>
+
+    <div class="row" id="memory-functions">
+      <button onclick="memoryStore()" class="memory">MS</button>
+      <button onclick="memoryRecall()" class="memory">MR</button>
+      <button onclick="memoryAdd()" class="memory">M+</button>
+      <button onclick="memorySubtract()" class="memory">M-</button>
+      <button onclick="memoryClear()" class="memory">MC</button>
+
+    </div>
+
+    <div class="row" id="advanced-functions">
+      <button onclick="appendOperator('√')" class="advanced">√</button>
+      <button onclick="appendOperator('^')" class="advanced">^</button>
+      <button onclick="appendOperator('sin(')" class="advanced">sin</button>
+      <button onclick="appendOperator('cos(')" class="advanced">cos</button>
+      <button onclick="appendOperator('tan(')" class="advanced">tan</button>
+      <button onclick="appendOperator('log(')" class="advanced">log</button>
+      <button onclick="appendOperator('ln(')" class="advanced">ln</button>
+      <button onclick="appendOperator('(')" class="advanced">(</button>
+      <button onclick="appendOperator(')')" class="advanced">)</button>
+      <button onclick="appendPi()" class="advanced">π</button>
+    </div>
+  </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
